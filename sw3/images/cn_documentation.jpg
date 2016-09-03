@@ -1,0 +1,39 @@
+The Open Systems Interconnection model  is a  model that divides the communication functions of a telecommunication or computing system into different parts without taking in concern their internal structure or the technology they are using.Its goal is to connect different communication system with standard protocols.It defines a communication system into 7 different layers called the Abstraction Layer.In this model, each layer serve each other. For example, the layer serves the layer above it and calls the layer below it to send and recieve packets for error free communication across a network.Open System Interconnection project gave birth to this system.
+
+Osi consists of two major parts:
+1.Abstract Model Of Networking(also known as the Basic Referrence Model or the Seven-layer model)
+2.a set of specific protocols
+
+OSI developed slowly by working with ARPANET, NPLNET, EIN and CYCLADES Network.In this model, the network system is divided into seven layers. In the layers, one or more entities implement their functions. Each entity interacts with the layer directly beneath it and provides facilities to use layer above it.
+
+Protocols provide an entity in one host to interact with the same entity of the same layer but in a different host.
+
+The seven layers are divided into 2 sub-parts:
+
+1.Host Layer: which includes
+	a.Application Layer:-High level APIs,remote file access.The Protocol Data Unit(PDU) used here is Data.
+	b.Presentation Layer:-Data translation between neyworking service and an application which includes character encoding, data compression and encrypting/decrypting. The Protocol Data Unit(PDU) used here is the Data.
+	c.Session Layer:-Managing the communication sessions.The Protocol Data Unit(PDU) used here is the Data.
+	d.Transport Layer:-Reliable transmission of data segments in a network including segmentation, acknowledgement and multiplexing.The Protocol Data Unit(PDU) used here is Segment(TCP) Datagram(UDP).
+
+2.Media layer: which includes
+	a.Network Layer:- Structuring and managing a network, addressing, routing and traffic control.The Protocol Data Unit(PDU) used here is Packet
+	b.Data Link Layer:- Transmission of data frames between nodes connected by a physical layer.The Protocol Data Unit(PDU) used here is Frame.
+	c.Physical Layer:- Transmission and reception of raw bits over a physical medium.
+
+Working Of OSI:-
+	1.Data is composed at the topmost layer(N-layer) of the device.
+	2.The PDU is passed on to the next layer(N-1 layer).Here, it is known at the Service Data Unit.
+	3.A header, a footer or both are concatenated to form a layer N-1 PDU.Then it is passed to the N-2 layer.
+	4.The above steps keep on happening till it reaches the lowermost level and the data is transmitted to the recieving device.
+
+Advantages of OSI:-
+	1.Information hiding
+	2.Breaking up of complex problems into smaller manageable instructions
+	3.Upper layer and lower layers are interconnected.
+
+Disadvantages of OSI:-
+	1.Error control appear again and again in each layer
+	2.Too much time taking
+	3.Too compelx to be handled.
+	
