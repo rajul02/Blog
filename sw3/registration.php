@@ -10,17 +10,17 @@
 
     $username = $_POST['username'];
 
-    $password =$_POST['password'];
+    $password = md5($_POST['password']);
     $user = $funObj->Register($username,$password);
-   /* if($user)
+    if($user)
     {
-      //registration sucess
-      header("Location: index.php");
+      echo 'registration sucess';
+      header("Location: login.php");
     }
     else {  
             // Registration Failed  
             echo "<script>alert('username / Password Not Match')</script>"; 
-          }*/
+          }
 
   }
   ?>
@@ -115,7 +115,7 @@
            <form name="register" method="post"  onsubmit="return(validate())" action="">
               <p>   
                 <label for="username" class="text" data-icon="e" > <h5 style="font-size: 20px; color: #F26649; font-family: 'Open Sans', sans-serif;">Your Username</h5></label>  
-                <input id="username" name="username" required="required" type="text" placeholder="Rajul Nahar"  style="width: 50%;
+                <input id="username" name="username" required="required" type="text" placeholder="Mohit Sharma"  style="width: 50%;
   padding: 8px;
   font-size: 14px;
   font-weight: 400;
@@ -126,7 +126,7 @@
                   </p>  
                   <p>   
                  <label for="password" class="youpasswd" data-icon="p"> <h5 style="font-size: 20px; color: #F26649; font-family: 'Open Sans', sans-serif;">Your password</h5> </label>  
-                <input id="password" name="password" required="required" type="password" placeholder="u14co001" style="width: 50%;
+                <input id="password" name="password" required="required" type="password" placeholder="u14co093" style="width: 50%;
   padding: 8px;
   font-size: 14px;
   font-weight: 400;
@@ -137,7 +137,7 @@
                   </p>  
                   <p>   
                  <label for="rpassword" class="ryoupasswd" data-icon="p"> <h5 style="font-size: 20px; color: #F26649; font-family: 'Open Sans', sans-serif;">Re-enter Password</h5> </label>  
-                <input id="rpassword" name="rpassword" required="required" type="password" placeholder="u14co001" />   
+                <input id="rpassword" name="rpassword" required="required" type="password" placeholder="u14co093" />   
                   </p>  
                   <p class="register button" >   
                   <input type="submit" name="register" value="Register" style=" border: none; color: #ffffff;padding: 11px 53px;font-size: 17px;cursor: pointer;margin: 0 0 32px 0;background: #4A245E;border: none;outline: none;-webkit-appearance: none; />   

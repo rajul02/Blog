@@ -18,6 +18,7 @@
     }
     else
     {
+      $password = md5($password);
       $user = $funObj->Login($username,$password);
     if(!$user)
       echo " Incorrect username or password";
@@ -83,11 +84,11 @@
            <form name="login" method="post" action="">
               <p>   
                 <label for="username" class="text" data-icon="e" > <h5>Your User name<h5></label>  
-                <input id="username" name="username" required="required" type="text" placeholder="Rajul Nahar"/>   
+                <input id="username" name="username" required="required" type="text" placeholder="Mohit Sharma"/>   
                   </p>  
                   <p>   
                  <label for="password" class="youpasswd" data-icon="p"> <h5>Your password<h5> </label>  
-                <input id="password" name="password" required="required" type="password" placeholder="u14co001" />   
+                <input id="password" name="password" required="required" type="password" placeholder="u14co093" />   
                   </p>   
                   <p class="login button">   
                   <input type="submit" name="login" value="Login" />   

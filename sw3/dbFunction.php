@@ -20,7 +20,7 @@ session_start();
 			if (!$res) {
     		echo 'Could not run query: ' . mysqli_error();
     		exit;
-		}
+		  }
 			
 
 			$no_rows = mysqli_num_rows($res);
@@ -30,6 +30,7 @@ session_start();
 
 			{	
 				$_SESSION['blogger_id'] = $user_data["blogger_id"];
+        $_SESSION['blooger_username'] = $user_data['blogger_username'];
 				header("Location: blogger.php");
 				
 				
@@ -50,7 +51,7 @@ session_start();
 			$d = date_create()->format('Y-m-d');
 			mysqli_query($this->db, "INSERT INTO `blogger_info` (`blogger_id`, `blogger_username`, `blogger_password`, `blogger_creation_date`, `blogger_is_active`, `blogger_updated_date`, `blogger_end_date`) VALUES ('', '$username', '$password', '$d', '1', '', '')");
 
-			
+			return true;
 			
 		}
 		public function isUserActive($id)

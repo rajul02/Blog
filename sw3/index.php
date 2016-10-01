@@ -62,6 +62,7 @@
   $id='*';
   $funObj = new dbFunction($conn);
   $user = $funObj->getBlogsById($id);
+  if(!is_null($user)){
 
   while ($row=mysqli_fetch_assoc($user)) {
     echo '<div class="col-md-9 main" style="border: ridge; border-radius:25px; margin_bottom:10px">';
@@ -99,6 +100,7 @@
   
 
   }
+}
 ?>
     
     
