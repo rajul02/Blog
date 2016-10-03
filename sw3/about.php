@@ -1,6 +1,10 @@
 <?php
-	echo "Made By:-";
-	echo "<h2>Name: Rajul Nahar</h2>";
-	echo "<h2>Roll No.: U14CO001</h2>";
+	session_start();
+	if(isset($_SESSION['blogger_id']) && isset($_SESSION['blooger_username'])) {
+	echo "<h2>Blogger Id: ".$_SESSION['blogger_id']."</h2>";
+	echo "<h2>Username: ".$_SESSION['blooger_username']."</h2>";
+	}else {
+		echo "Please Login";
+	}	
 
 ?>
